@@ -8,9 +8,27 @@ function App() {
 
   let [counter, setCounter] =  useState(0);
 
+  // const increment = () => {
+  //   setCounter(counter+1);
+  //   // console.log("Clicked", counter);
+  // }
+
+  // React imp Interview Ques -> 
+  // setCounter ek fxn -> Jo ek callback accept krta hai.. -> jb callback ke through ata hai to complete hone ke baad dusra call hota hai... -> tab jake value update hoti hai...
+  // What will b the value of counter if i press button 1 time? Ans : defalu = 0 -> After pressing it will be 1
+  // const increment = () => {
+  //   setCounter(counter+1);
+  //   setCounter(counter+1);
+  //   setCounter(counter+1);
+  //   setCounter(counter+1);
+  // }
+
+  // What will b the value of counter if i press button 1 time? Ans : defalu = 0 -> After pressing it will be 4
   const increment = () => {
-    setCounter(counter+1);
-    // console.log("Clicked", counter);
+    setCounter(prevCounter => prevCounter + 1);
+    setCounter(prevCounter => prevCounter + 1);
+    setCounter(prevCounter => prevCounter + 1);
+    setCounter(prevCounter => prevCounter + 1);
   }
 
   const decrement = () => {
