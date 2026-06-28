@@ -4,7 +4,7 @@ function App() {
   const [color, setColor] = useState("olive");
 
   return (
-    // color -> is a state -> this is how we implement a state 
+    // color -> is a state -> this is how we implement a state -> style={{backgroundColor: color}}
     <div className="w-full h-screen duration-200"
     style={{backgroundColor: color}}>
       <div className="fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2">
