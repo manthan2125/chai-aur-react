@@ -7,7 +7,7 @@ const App = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     console.log(`Submitted by ${username}`);
-    setUsername('')
+    setUsername('');
   }
 
   return (
