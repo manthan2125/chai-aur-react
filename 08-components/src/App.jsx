@@ -1,22 +1,53 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import Card from './components/Card'
 
 const App = () => {
+
+  const users = [
+  {
+    "name": "Aarav Sharma",
+    "city": "Delhi",
+    "age": 25,
+    "profession": "Software Engineer",
+    "profilePhoto": "https://i.pravatar.cc/150?img=1"
+  },
+  {
+    "name": "Priya Verma",
+    "city": "Mumbai",
+    "age": 28,
+    "profession": "Graphic Designer",
+    "profilePhoto": "https://i.pravatar.cc/150?img=5"
+  },
+  {
+    "name": "Rahul Singh",
+    "city": "Jaipur",
+    "age": 31,
+    "profession": "Teacher",
+    "profilePhoto": "https://i.pravatar.cc/150?img=8"
+  },
+  {
+    "name": "Neha Patel",
+    "city": "Ahmedabad",
+    "age": 26,
+    "profession": "Doctor",
+    "profilePhoto": "https://i.pravatar.cc/150?img=10"
+  },
+  {
+    "name": "Vikram Mehta",
+    "city": "Bengaluru",
+    "age": 34,
+    "profession": "Data Analyst",
+    "profilePhoto": "https://i.pravatar.cc/150?img=12"
+  }
+]
+
   return (
     <>
-      <Navbar />
-      <Footer />
-    {/* But this nav or header is not reusable */}
-      {/* <nav className='px-10 py-5 bg-emerald-700 flex justify-between items-center'>
-        <h2 className='text-2xl'>Sheriyans</h2>
-        <div className='flex gap-8 items-center'>
-          <h4 className='text-xl'>About</h4>
-          <h4 className='text-xl'>Contact Us</h4>
-          <h4 className='text-xl'>Services</h4>
-          <h4 className='text-xl'>Your Account</h4>
-        </div>
-      </nav> */}
+      <div className='p-10'>
+        {users.map(function(user, idx) {
+          return <Card key={idx} name={user.name} age={user.age} city={user.city} prof={user.profession} photu={user.profilePhoto} />
+        })}
+      </div>
     </>
   )
 }
