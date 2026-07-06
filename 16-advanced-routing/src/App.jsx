@@ -9,6 +9,8 @@ import NotFound from './pages/NotFound'
 import Men from './pages/Men'
 import Women from './pages/Women'
 import Kids from './pages/Kids'
+import Courses from './pages/Courses'
+import CourseDetails from './pages/CourseDetails'
 
 const App = () => {
   return (
@@ -17,6 +19,10 @@ const App = () => {
       <Routes>
         <Route path='/' element ={<Home />} />
         <Route path='/about' element ={<About />} />
+        <Route path='/courses' element={<Courses />} />
+        {/* Dynamic Routing   (id -> ki jagah kch bhi likh skte hain colon lgaana zruri hai)       */}
+        <Route path='/courses/:id' element={<CourseDetails />}/>
+
         <Route path='/product' element ={<Product />} >
           <Route path='men' element ={<Men />} />
           <Route path='women' element ={<Women />} />
